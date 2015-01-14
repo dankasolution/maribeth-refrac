@@ -1,0 +1,31 @@
+<section class="homebanner">
+	<div class="centrewrapper">
+		<div class="transparentbox">
+			<span>Crew Shift Management<br />
+				... never been easier...
+			</span>
+		</div>
+	</div>
+</section>
+<div class="bar lighterbasecolor">
+	<div class="centrewrapper">	
+		<div class="form-login">
+			<div>
+	        	<label>Username</label>
+	        	<input type="text" ng-model="vm.username">&nbsp;&nbsp;
+	        </div>
+	        <div>				
+	        	<label>Password</label>
+				<input type="password" ng-model="vm.password" ng-enter="vm.logMeIn()">&nbsp;&nbsp;
+			</div>
+			<div>
+				<button type="submit" class="btn btn-primary" ng-click="vm.logMeIn()">Login</button>
+			</div>
+		</div>
+	</div>
+	<p class="msg">{{vm.userDetails.msg}}</p>
+	<div class="form-footer">
+		Not registered yet? <a ui-sref="signup">Sign Up here</a>
+	</div>
+	<br /><br /><br /><br />
+</div>

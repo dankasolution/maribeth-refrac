@@ -1,0 +1,72 @@
+<div class="lighterbasecolor">
+    <div class="centrewrapper content contentbasecolor">    
+        
+        <div>
+			<a href='#/manager/crews'>Back</a>
+			<div class="form-container">
+				<p class="form-header">
+					ADD CREW<br />
+				</p>
+				<form class="form-horizontal">
+					<fieldset>
+                        <legend>Crew Profile</legend>
+                        <div class="control-group">
+                            <label class="control-label" for="firstname">Firstname</label>
+                            <div class="controls">
+                                <input type="text" name="firstname" ng-model="vm.firstname">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="lastname">Lastname</label>
+                            <div class="controls">
+                                <input type="text" name="lastname" ng-model="vm.lastname">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="street">Street</label>
+                            <div class="controls">
+                                <input type="text" name="street" ng-model="vm.street">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="city">City</label>
+                            <div class="controls">
+                                <input type="text" name="city" ng-model="vm.city">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="state">State</label>
+                            <div class="controls">
+                                <input type="text" name="state" ng-model="vm.state">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="postcode">Postcode</label>
+                            <div class="controls">
+                                <input type="text" name="postcode" ng-model="vm.postcode">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="email">Email</label>
+                            <div class="controls">
+                                <input type="text" name="email" ng-model="vm.email">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="phone">Phone</label>
+                            <div class="controls">
+                                <input type="text" name="phone" ng-model="vm.phone">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">&nbsp;</label>
+                            <div class="controls">
+                                <button type="submit" class="btn btn-primary" ng-click="vm.addCrew()" >Save</button>
+                            </div>
+                        </div>
+                    </fieldset>							
+				</form>
+			</div>
+		</div>
+	</div>
+</div>	

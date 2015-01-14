@@ -1,0 +1,21 @@
+<div class="lighterbasecolor">
+	<div class="centrewrapper content contentbasecolor">
+		<div class="mainnav">	
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" ng-class="{'active':vm.isActive('manager.home')}">
+					<a  ui-sref=".home">Home</a>
+				</li>
+				<li role="presentation" ng-class="{'active':vm.isActive('manager.crews')}">
+					<a ui-sref=".crews">Crews</a>
+				</li>
+				<li role="presentation" ng-class="{'active':vm.isActive('manager.profile')}">
+					<a ui-sref=".profile">Profile</a>
+				</li>
+				<li role="presentation" ng-class="{'active':vm.isActive('manager.reports')}">
+					<a ui-sref=".reports">Reports</a>
+				</li>
+			</ul>
+		</div>
+		<div ui-view class="uiview"></div>
+	</div>
+</div>

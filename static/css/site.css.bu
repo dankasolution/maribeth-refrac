@@ -1,0 +1,211 @@
+header{
+	border-bottom: 8px solid #440606;
+}
+	header img{
+		margin: 5px 0px 0px 5px;
+	}
+
+body{
+	background-color: #242424;
+}
+
+form{
+	clear: both;
+	padding: 20px;
+}
+
+legend{
+	color: #7d7d7d;
+}
+
+.appheader{ height: 55px;}
+  .appheader span{font-weight: bold;}
+
+.appbody{
+	padding: 0px;
+}
+
+.mainnav{
+	text-align: right;
+	border-bottom: solid 1px grey;
+}
+
+.uiview{
+	margin-top: 10px;
+}
+
+.shifttable td{padding: 4px}	
+.shifttable td input{
+	width: 100px;
+}
+
+.shifttable td input[type="checkbox"]{width: 30px}
+
+.bar{
+	clear: both;
+	min-height: 50px;
+}
+
+.basecolor{
+	background-color: #d0ab80;
+}
+
+.lighterbasecolor{
+	background-color: #ffdead;
+}
+
+.contentbasecolor{
+	background-color: white;
+}
+
+.centrewrapper{
+	max-width: 906px;
+	padding: 10px;
+	margin: 0px auto;
+}
+
+.homebanner{
+	height: 369px;
+	background-image: url('../images/bg1.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; /*auto|length|cover|contain|initial|inherit;*/
+	background-color: #6f3414;	
+	border-bottom: 8px solid #440606;
+}
+
+.transparentbox{
+	width: 450px;
+	height: 150px;
+	background-color: white;
+	opacity: 0.4;
+    filter: alpha(opacity=40);
+    border-radius: 10px;
+    margin-top: 150px;
+    padding: 8px;
+}
+	.transparentbox span{	
+		font-size: 3em;
+		font-weight: bold;
+		color: #440606;
+		font-family: 'Calibri', serif;
+		font-style: italic;
+		line-height: 1.5em;
+	}
+
+.form-header{
+	padding: 20px;
+	text-align: center;
+}
+	.form-header p{
+		font-size: 2em;
+		font-weight: bold;
+	}
+
+.form-login{
+	display: inline-block;
+	padding-top: 20px;
+	margin: 0px auto;
+	/*
+	border: solid 1px red;
+	padding: 40px 0 0 0;	
+	border: solid 1px red;*/
+}
+	.form-login div{
+		display: block;
+		min-width: 50px;
+		float:left;
+	}
+	
+	.form-login input{
+		width: 140px;
+		font-size: 18px;
+	}
+
+	.form-login label{
+		font-size: 18px;
+		width: 100px;
+		color: #440606;
+	}
+
+
+.form-footer{
+	clear: both;
+	font-size: 16px;
+	text-align: center;
+}
+
+.inlinenavigation{
+	padding: 20px;
+	float: left;
+}
+
+.mainnavigation{
+	float: right;
+	height: 50px;
+	font-size: 16px;
+}
+
+.msg{
+	text-align: center;
+	color: red;
+}
+
+.leftcolumn{
+	float: left;
+	width: 200px;
+	margin-right: 20px;	
+}
+
+.centercolumn{
+	float: left;
+}
+
+.content{
+	padding: 10px;
+	min-height: 600px;
+}
+
+.todaylist{
+	margin-top: 40px;
+	border: solid 1px grey;
+	border-radius: 6px;
+	padding: 5px;
+}
+
+.grid{
+	clear: both;
+	min-width: 500px;
+	/*border: solid 1px red;*/
+}
+
+/*.row {margin-left: 0px;}
+.row div{
+	padding: 4px;
+	float: left;
+	font-size: 16px;
+	border: solid 1px #cfcfcf;
+	height: 30px;
+	line-height: 1.8;
+}*/
+
+.gridheader { height: 20px; margin-bottom: 5px}
+.gridheader .title{
+	float: left;
+	font-weight: bold;
+	font-size: 18px;	
+}
+.gridheader a{
+	float: right;
+}
+
+.crewrow { clear: both;}
+.crewrow .name{
+	width: 35%;
+}
+
+.crewrow .item{
+	width: 20%;
+	text-align: center;
+}
+

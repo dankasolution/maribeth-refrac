@@ -1,0 +1,73 @@
+<div>
+	<a href="#/manager/crews">Back</a>
+	<h2>Crew: {{user[0].profile[0].firstname}}</h2>
+	<form class="form-horizontal">
+		<input type="hidden" name="crewid" value="{{user[0]._id}}" />				
+		<div style="float: left;">            
+            <div class="input-group">
+            	<span class="input-group-addon"><b>Add Shift: </b></span>
+            	<input class="form-control" type="text" name="startdate" placeholder="Pick a date" 
+            		style="width:150px;" 
+            		datepicker-popup="dd MMM yyyy"
+            		is-open = "vm.calopened"
+            		ng-model="vm.shiftontable.startdate" />
+            	<a type="button" class="input-group-addon" ng-click="vm.openCalendar($event)">
+            		<i class="glyphicon glyphicon-calendar" />            		
+            	</a>
+            </div>
+        </div>
+        <div style="float: right;" ng-hide="(vm.shifts.length==0)">
+	        <div class="input-group">
+		        <span class="input-group-addon"><b>Shift Records: </b></span>
+	            <select style="width:150px" ng-change="vm.populateTable()" class="form-control"
+	            	ng-model="vm.shiftontable" ng-options="item.startdate for item in vm.shiftrecords | date : 'd MMMM y'">
+	            	<option value="" disabled>Select a shift</option>
+	            </select>
+            </div>				                   
+        </div>
+        <br />
+        <hr />        			        			        
+	    <div style="clear: both;margin: 10px auto;">
+	        <table class="table table-striped shifttable">
+	            <thead>
+	                <tr>
+	                    <th>&nbsp;</th>
+	                    <th>Day</th>
+	                    <th class="greenheader">Start Work</th>
+	                    <th class="peachheader">Start Break</th>
+	                    <th class="peachheader">Finish Break</th>
+	                    <th class="greenheader">Finish Work</th>
+	                    <th>&nbsp;</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+	                <tr ng-repeat="shifthours in vm.shiftontable.shifthours">
+	                    <td><input type="checkbox" ng-model="shifthours.status" /></td>
+	                    <td><input ng-model="shifthours.day" disabled></td>
+	                    <td>
+	                    	<input type="text" name="startwork_{{$index}}" ng-disabled="(!shifthours.status)" pick-a-time="shifthours.startwork"/>
+	                    </td>
+	                    <td>
+	                    	<input type="text" name="startbreak_{{$index}}" ng-disabled="(!shifthours.status)" pick-a-time="shifthours.startbreak"/>
+	                    </td>
+	                    <td>
+	                    	<input type="text" name="finishbreak_{{$index}}" ng-disabled="(!shifthours.status)" pick-a-time="shifthours.finishbreak"/>
+	                    </td>
+	                    <td>
+	                    	<input type="text" name="finishwork_{{$index}}" ng-disabled="(!shifthours.status)" pick-a-time="shifthours.finishwork"/>
+	                    </td>
+	                    <td>
+	                    	<input type="button" value="Clear" class="btn btn-sm btn-default" ng-click="vm.resetRow(shifthours)" />
+	                    </td>
+	                </tr>
+	            </tbody>
+	        </table>
+	        <div id="errormsg" class="message-error" /> 
+	    </div>
+	    <div>
+	        <button id="btn-update" type="button" class="btn btn-primary" style="float:right;" ng-click="vm.addShift()">
+	        	<span>Submit</span>
+	        </button>
+	    </div>
+	</form>
+</div>

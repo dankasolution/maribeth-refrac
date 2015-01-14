@@ -1,0 +1,63 @@
+<div>
+	<script type="text/ng-template" id="myEventContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Add New Event</h3>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal">
+				<div class="input-group">
+	            	<span><b>When: </b></span><br />
+	            	<div>
+		            	<input class="form-control" type="text" name="start" placeholder="Pick a date" 
+		            		style="width:100px;" 
+		            		datepicker-popup="dd MMM yyyy"
+		            		is-open = "calopened"
+		            		ng-model="newevent.start" />
+		            	<a type="button" class="input-group-addon" ng-click="openCalendar($event)">
+		            		<i class="glyphicon glyphicon-calendar" />            		
+		            	</a>
+		            </div>
+	            	<div>to</div>
+	            	<div>
+		            	<input class="form-control" type="text" name="end" placeholder="Pick a date" 
+		            		style="width:100px;" 
+		            		datepicker-popup="dd MMM yyyy"
+		            		is-open = "calopened"
+		            		ng-model="newevent.end" />
+		            	<a type="button" class="input-group-addon" ng-click="openCalendar($event)">
+		            		<i class="glyphicon glyphicon-calendar" />            		
+		            	</a>
+		            </div>	            	
+	            </div>
+	            <div class="input-group">
+	            	<span><b>What: </b></span><br />
+	            	<input class="form-control" type="text" name="title" placeholder="Event title" 
+	            		style="width:180px;" 
+	            		ng-model="newevent.title" />	            	
+	            </div>
+			</form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">Submit</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+
+	<a href="#/manager/crews">Back</a>	
+	<div>
+		<div class="leftcolumn">
+			<div class="todaylist">
+				<h4>Crew: A</h4>
+				<ul>
+					<li>08:00 - 10:00 Do stuff at the shop</li>
+					<li>10:00 - 16:00 Do stuff at the post office</li>
+				</ul>
+			</div>
+			<div>{{vm.log}}</div>
+		</div>
+		<div class="centercolumn">
+			<div ui-calendar="vm.uiConfig.calendar" ng-model="vm.crewCalendarSrc" style="width:600px">></div>
+		</div>
+	</div>
+</div>

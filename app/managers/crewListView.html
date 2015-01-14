@@ -1,0 +1,17 @@
+<div>
+	<div class="grid">
+		<div class="gridheader">
+			<span class="title">Crews List</span>
+			<a href="#/manager/addcrew">Add Crew</a>
+		</div>		
+		<table class="table table-striped">
+			<tr ng-repeat="crew in vm.crews">
+				<td>{{crew.profile[0].firstname}}</td>
+				<td><a href="#/manager/crewshifts/{{crew._id}}">Shifts</a></td>
+				<td><a href="#/manager/crewcalendar/{{crew._id}}">Calendar</a></td>
+				<td><a href="#/manager/crewprofile/{{crew._id}}">Profile</a></td>
+			</tr>
+		</table>
+		
+	</div>
+</div>
